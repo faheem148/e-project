@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="f.css">
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA&callback=initMap"></script>
+
+<style>
+   .abc{
+          border-radius: 10px;
+          margin-left: 20px;
+
+        }
+  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blueviolet;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ #cart{
+   margin-top: 30px;
+   color: #fff;
+ 
+   
+ }
+ 
+ #thumbnail{
+   margin-bottom: 10px;
+ }
+
+ .nav-link{
+      color:white;
+      
+     }
+     .nav-link:hover{
+      text-decoration: underline;
+      color: aqua;}
+     /* .nav-link:hover{
+      color: darkred;
+      background-color: azure;
+      border-radius: 10px;
+     } */
+     /* .active{
+      color: white;
+      background-color: white;
+      border-radius: 8px;
+     } */
+ /* nav ul{
+   list-style:none;
+   float:right;
+   margin:0;
+   padding:0;
+   display:flex;	
+ }
+ nav ul li a{
+   
+   line-height: 80px;
+   color:#fff;
+   padding:12px 30px;
+   text-decoration:none;
+   font-size:14px;
+   font-weight:bold;
+   text-transform:uppercase;
+   position: relative;
+   transform: all 0.3s;
+ }
+ nav ul li a:hover{
+   background:rgb(10, 115, 227);
+   border-radius:6px;
+ } */
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 10px;
+  
+  
+   /* background-image: url(photo-1551958219-acbc608c6377.avif);  */
+  /* padding: 0px; */
+padding-top: 5%; 
+  padding-bottom: 0px; 
+  
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.footer-menu{
+  width: 100%;
+}
+
+
+
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-primary  fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-danger" href="Home.html" style="font-family: Arial;"><img class="abc" height="55px" width="55px" src="images/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="padding-left: 25px;">
+            <a class="nav-link" aria-current="page" href="home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.Html">ABOUT</a>
+        </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html">CONTACT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             ALL PRODUCTS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="diamonds.html"><B>HOPE DIAMOND</B></a></li>
+              <li><a class="dropdown-item" href="Amber.Html"><b>AMBERS</b></a></li>
+              <li><a class="dropdown-item" href="Amethysts.Html"><b>AMETHYSTS</b></a></li>
+              <li><a class="dropdown-item" href="Amber.Html"><b>COPAL AMBERS</b></a></li>
+              <li><a class="dropdown-item" href="diamonds.html"><b>PURPLE DIAMOND</b></a></li>
+              <li><a class="dropdown-item" href="mythic.Html"><b>MYTHIC AMBERS</b></a></li>
+              <li><a class="dropdown-item" href="new arrival.html"><b>NEW ARRIVAL</b> </a></li>
+              <li><a class="dropdown-item" href="special offer.html"><b>SPECIAL OFFER</b></a></li>
+             
+  
+            
+             
+             
+            </ul>
+
+        </ul>
+        <!-- <form class="d-flex" role="search" style="padding-right: 50px;">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">SEARCH</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+  <br> <br>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2 style="color: white;">Contact Us</h2>
+   
+  </div>
+ <div class="container-fluid" >
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <img src="images/a1.png" style="width:100%;height:80%">
+    
+    </div>
+    
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <form action="#" id="form">
+        <label for="fname">First Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="name" name="name" placeholder="Your last name..">
+        <label for="Message">Message</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit" onclick="showAlert()" type="submit" style="border-radius: 8px;">
+       
+      </form>
+     
+    </div>
+  </div>
+</div>
+<br>  <br> <br>
+<footer>
+>
+  <ul class="footer-menu">
+    <li>
+      <div class="footer-col" >
+        <h2>Crystal</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.Html">About</a></li>
+            <li><a href="contact.html">Contact us </a></li>
+            <li><a href="diamonds.html">All Product</a></li>
+            
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="footer-col">
+        <h2>Get help</h2>
+        <ul>
+            <li><a href="home.html">FAQ</a></li>
+            <li><a href="home.html">shipping</a></li>
+            <li><a href="home.html">order status</a></li>
+            <li><a href="home.html">payment options</a></li>
+        </ul>
+    </div>
+    </li>
+    <li>
+      <div class="footer-col">
+        <h2>Online shop</h2>
+        <ul>
+            <li><a href="diamonds.html">Diamond</a></li>
+            <li><a href="Amber.Html">copal</a></li>
+            <li><a href="Amethysts.Html">Amethysts</a></li>
+            <li><a href="mythic.Html">Mythic</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <br>
+      <div class="footer-col">
+        <h2>Information</h2>
+        <ul>
+            <li><a href="#">Cell:3261679323</a></li>
+            <li><a href="#">Adress: Nazimabad No:01 Sindh,Pakistan</a></li>
+            <li><a href="mailto:faheemkhan13258@gmail.com">Mail Us</a></li>
+          
+        </ul>
+      </div>
+    </li>
+    <li>
+      <br>
+      <div class="footer-col">
+      <h2>Follow me</h2>
+      <a class="social-links">
+         <a href=""> <img src="images/fb (1).png" alt=""></a>
+         <a href=""><img src="images/fb (2).png" alt=""></a> 
+         <a href=""><img src="images/fb (3).png" alt=""></a> 
+        
+      </a>
+      </div>
+
+    </li>
+  </ul>
+</footer>
+
+<script>
+   function showAlert() {
+        alert("Your information is submitted successfully")
+      }
+</script>
+
+</body>
+</html>
